@@ -5,6 +5,7 @@ import { io, type Socket } from 'socket.io-client';
 import { onMounted, onUnmounted, ref } from 'vue';
 import PopOver from '../popover/PopOver.vue';
 import NotificationPanel from '../navBar/NotificationPanel.vue';
+import config from '@/config';
 
 // let socket: Socket;
 const data = ref<StockNotification>();
@@ -19,7 +20,8 @@ onMounted(() => {
 });
 
 const getNotification = (): void => {
-  socket.value = io('/', {
+  // socket.value = io('http://localhost:3000', {
+  socket.value = io(config.apiURL, {
     transports: ['websocket'],
     withCredentials: true,
     reconnection: true,

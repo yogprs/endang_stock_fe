@@ -9,23 +9,19 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    
+
     "baseUrl": ".",
-    "types": [
-      "mocha",
-      "cypress",
-    ],
+    "types": ["mocha", "cypress"],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     }
   },
   "include": [
-    "src/**/*.tsx", 
-    "src/**/*.vue", 
+    "src/**/*.tsx",
+    "src/**/*.vue",
     "**/*.d.ts",
     "**/*.ts",
-    "vite.config.ts", "cypress.config.mjs",
+    "vite.config.ts",
+    "cypress.config.mjs"
   ]
 }
